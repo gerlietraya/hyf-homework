@@ -3,25 +3,32 @@
 *{
     box-sizing: border-box;
     margin: 0%;
-    padding: 0%
-
-}
-
-body{
-   
-    background-image: url("./images/giphy.gif");
+    padding: 0%;   
+    background-image: url("./images/source.gif");
     background-position: center;
-    background-repeat: no-repeat;
+    
+    background-size: 300px 200px;
+    
    
+}
+body{
+    font-size: 30pt
 }
 #title{
     font-family: 'Dancing Script', cursive;
+    background-color: rgb(230, 240, 236);
     text-align: center;
-    padding: 50pt;
-    
+    padding: 30px;  
+    background: #cce5ff;  
+}
+ul{
+    list-style-type: none;
 }
 
-#title:hover{
-    background-color: #cc0066
-}
+ul li {
+    background: #cce5ff;
+    margin: 15px;
+   
+  }
+
 

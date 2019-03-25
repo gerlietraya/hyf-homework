@@ -1,36 +1,48 @@
-SELECT task.title
+Use datapractice;
+
+show tables;
+ 
+select count(*)
 FROM task;
 
-SELECT task.title
-FROM task
-WHERE due_date is null;
+select count(*)
+from task
+where due_date = null;
 
-SELECT task.title
-FROM task
-WHERE status = 'done';
+select title
+from task join status ON status_id = status.id
+where status.name = "done";
 
-SELECT task.title
-FROM task
-WHERE status != 'done';
+select title
+from task join status On status_id = status.id
+where status.name = "not done";
 
-SELECT task.tile
-FROM task
-ORDER BY date_created DESC;
+select title
+from task 
+order by created desc;
 
-SELECT task.title
-FROM task
-ORDER BY date_created ASC
-LIMIT 1;
+select title 
+from task
+order by created desc
+limit 1;
 
-SELECT task.title, task.due_date
-FROM task
-WHERE title LIKE '%database%' 
-	OR description LIKE '%database%';
+select title,due_date
+from task
+where description or title like "%database%";
+
+select title, name
+from task join status on status_id = status.id;
+
+select name, count(status_id)
+from status join task on status_id =status.id
+group by status_id;
+
+select name, status_id
+from status join task on status_id = status.id
+order by status_id desc;
 
 
-    
 
-    
 
 
 
